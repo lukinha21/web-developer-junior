@@ -38,25 +38,8 @@ Projeto construído com foco em boas práticas de arquitetura monolítica, uso c
 
 ## 🗂️ Estrutura de Pastas
 
+<img width="269" height="518" alt="image" src="https://github.com/user-attachments/assets/14deb976-4242-4b3e-b37f-046bcf6c173f" />
 
-app/
-├── Controllers/       # Blog + Admin
-
-├── Models/            # Post
-
-├── Views/
-
-│   ├── blog/          # index, show
-
-│   └── admin/         # login, dashboard
-
-public/
-
-├── css/
-
-├── js/
-
-├── uploads/           # imagens dos posts
 
 
 🔒 Segurança 
@@ -132,9 +115,15 @@ Todos os Posts
 
 📤 Envio
 Repositório final hospedado em:
+
 👉 https://github.com/lukinha21/web-developer-junior
 
+
 🙋‍♂️ Autor
+
 Lucas alexandre da silva
+
 Email: luczslv21@gmail.com
+
 GitHub: @lukinha21
+
