@@ -1,68 +1,107 @@
-# CodeIgniter 4 Application Starter
+# Web Developer Junior – Avaliação Técnica
 
-## What is CodeIgniter?
+Repositório para avaliação técnica da vaga **Desenvolvedor Web Júnior**.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+Projeto construído com foco em boas práticas de arquitetura monolítica, uso correto de ORM, interface responsiva e controle de versão com Git.
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+⚙️ Funcionalidades 
+ - Autenticação com login e senha 
+ - Registro de usuários 
+ - CRUD completo de posts 
+ - Upload de imagem para cada post 
+ - Visualização pública do blog 
+ - Busca por título de post 
+ - Visualização de post individual 
 
-## Installation & updates
+### 📰 Blog Público
+- Listagem de posts em destaque com carrossel
+- Busca dinâmica por título (AJAX + JSON)
+- Página de detalhes do post
+- Slugs legíveis para URLs
+- Design responsivo com Bootstrap 5
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
 
-## Setup
+## 🧰 Tecnologias Utilizadas
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+| Tecnologia | Descrição |
+|------------|-----------|
+| **CodeIgniter 4** | Framework PHP MVC (monolítico) |
+| **Eloquent ORM** | ORM para integração com MySQL |
+| **Bootstrap 5** | Layout moderno e responsivo |
+| **jQuery + AJAX** | Busca em tempo real |
+| **MySQL** | Banco relacional com modelagem |
+| **Git** | Versionamento com fluxo `development` → `main` |
 
-## Important Change with index.php
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+## 🗂️ Estrutura de Pastas
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
 
-**Please** read the user guide for a better explanation of how CI4 works!
+app/
+├── Controllers/       # Blog + Admin
+├── Models/            # Post
+├── Views/
+│   ├── blog/          # index, show
+│   └── admin/         # login, dashboard
+public/
+├── css/
+├── js/
+├── uploads/           # imagens dos posts
 
-## Repository Management
+🔒 Segurança 
+- Senhas com password_hash() e password_verify() 
+- Sessões armazenam user_id e username 
+- Proteção CSRF configurável no .env (csrf.protection = true recomendado após desenvolvimento) 
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+🧪 Como Executar Localmente
+- Clone o projeto:
+- git clone https://github.com/lukinha21/web-developer-junior.git
+- cd web-developer-junior
+- Instale as dependências (se estiver usando Composer):
+- composer install
+- Configure o banco:
+- Crie o banco no MySQL
+- Configure o .env:
 
-## Server Requirements
+.env (example) 
+<img width="321" height="150" alt="image" src="https://github.com/user-attachments/assets/7271ff83-bd6a-4513-8a42-757196f55dfc" />
+- Rode o servidor:
+- php spark serve
+- Acesse em http://localhost:8080
 
-PHP version 8.1 or higher is required, with the following extensions installed:
+🧾 Diagrama do Banco de Dados
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+<img width="431" height="473" alt="image" src="https://github.com/user-attachments/assets/7593a4d4-deab-494e-9eee-6eef0cf4618c" />
 
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> - The end of life date for PHP 8.1 will be December 31, 2025.
+Criação de post 
+<img width="590" height="253" alt="image" src="https://github.com/user-attachments/assets/5cdf08c4-1a6b-41a6-a315-a4a102a21232" />
+DashBoard 
+<img width="948" height="515" alt="image" src="https://github.com/user-attachments/assets/ce87657b-8f20-4b80-a865-a81f6de2c011" />
+Manutenção de posts 
+<img width="949" height="522" alt="image" src="https://github.com/user-attachments/assets/efa18978-a750-492f-a1a0-47e9d8ddbb68" />
+Edição de post 
+<img width="938" height="492" alt="image" src="https://github.com/user-attachments/assets/f8a00f88-3492-43d8-93ec-62a9e874fe49" />
+Pagina de login 
+<img width="808" height="542" alt="image" src="https://github.com/user-attachments/assets/95895000-23ed-44a7-a398-868df9710477" />
+Pagina de Registro 
+<img width="751" height="513" alt="image" src="https://github.com/user-attachments/assets/1d3b3180-77d2-4c8c-9e0e-96258e7f9021" />
+Pagina de Principal 
+<img width="595" height="515" alt="image" src="https://github.com/user-attachments/assets/c4a1e2f7-47c2-4ccf-9e3e-0e28f78dba78" />
+View de um post 
+<img width="803" height="470" alt="image" src="https://github.com/user-attachments/assets/28bb865e-e559-41c4-8179-2b0fd88babfc" />
+Pesquisar posts 
+<img width="796" height="536" alt="image" src="https://github.com/user-attachments/assets/3e90c457-0324-484b-be33-9b8f3e624ed4" />
+Todos os Posts 
+<img width="805" height="467" alt="image" src="https://github.com/user-attachments/assets/798e09cc-3b76-49fe-b5dd-50e39ec9a9cd" />
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+📤 Envio
+Repositório final hospedado em:
+👉 https://github.com/lukinha21/web-developer-junior
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+🙋‍♂️ Autor
+Lucas alexandre da silva
+Email: luczslv21@gmail.com
+GitHub: @lukinha21
