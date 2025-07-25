@@ -38,7 +38,8 @@ Projeto construído com foco em boas práticas de arquitetura monolítica, uso c
 
 ## 🗂️ Estrutura de Pastas
 
-<img width="269" height="518" alt="image" src="https://github.com/user-attachments/assets/14deb976-4242-4b3e-b37f-046bcf6c173f" />
+<img width="356" height="249" alt="image" src="https://github.com/user-attachments/assets/b06962a9-d07c-4754-ae19-58d0463e2239" />
+
 
 
 
