@@ -34,10 +34,12 @@ class Filters extends BaseFilters
         'forcehttps'    => ForceHTTPS::class,
         'pagecache'     => PageCache::class,
         'performance'   => PerformanceMetrics::class,
+        'auth'     => \App\Filters\AuthCheck::class,
+
     ];
 
     /**
-     * List of special required filters.
+     * List of special required filters. 
      *
      * The filters listed here are special. They are applied before and after
      * other kinds of filters, and always applied even if a route does not exist.

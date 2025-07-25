@@ -1,0 +1,31 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f7fa;
+}
+
+.stat-card {
+    border: none;
+    border-radius: 16px;
+    padding: 20px;
+    background: linear-gradient(135deg, #eee, #ccc);
+    transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: scale(1.03);
+}
+
+.stat-pink    { background: linear-gradient(to right, #f857a6, #ff5858); }
+.stat-green   { background: linear-gradient(to right, #00cdac, #02aab0); }
+.stat-orange  { background: linear-gradient(to right, #f46b45, #eea849); }
+.stat-yellow  { background: linear-gradient(to right, #f9d423, #ff4e50); }
+
+.recent-post-card {
+    border: none;
+    border-radius: 12px;
+    transition: box-shadow 0.3s ease;
+}
+
+.recent-post-card:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
